@@ -1,12 +1,12 @@
 # //////////////////////////////
 # VARIABLES
 # //////////////////////////////
-variable "aws_access_key" {}
+# variable "aws_access_key" {}
 
-variable "aws_secret_key" {}
+# variable "aws_secret_key" {}
 
 variable "region" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "vpc_cidr" {
@@ -68,8 +68,8 @@ variable "environment_instance_settings" {
 # PROVIDERS
 # //////////////////////////////
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  # access_key = var.aws_access_key
+  # secret_key = var.aws_secret_key
   region     = var.region
 }
 
