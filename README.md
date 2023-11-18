@@ -1,6 +1,5 @@
 # Advanced Terraform
 
-![Advanced Terraform][lil-thumbnail-url] 
 
 ## Instructions
 This repository has a folder for each of the videos in the course. The naming convention is [CHAPTER]_[NAME], e.g.: **01_05_base**
