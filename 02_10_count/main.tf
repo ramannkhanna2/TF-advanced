@@ -1,9 +1,9 @@
 # //////////////////////////////
 # VARIABLES
 # //////////////////////////////
-variable "aws_access_key" {}
+# variable "aws_access_key" {}
 
-variable "aws_secret_key" {}
+# variable "aws_secret_key" {}
 
 variable "iam_accounts" {
   type = set(string)
@@ -72,8 +72,8 @@ variable "environment_instance_settings" {
 # PROVIDERS
 # //////////////////////////////
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  # access_key = var.aws_access_key
+  # secret_key = var.aws_secret_key
   region     = var.region
 }
 
@@ -156,6 +156,10 @@ resource "aws_instance" "nodejs1" {
   tags = {Environment = var.environment_list[0]}
 }
 
+resource "aws_iam_user" "iam-users" {
+  for_each = var.iam_accounts
+  name = each.key
+}
 
 # //////////////////////////////
 # DATA
