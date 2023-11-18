@@ -7,5 +7,4 @@
 *.lock.info
 .terraform
 .DS_Store
-*.terraform.lock.hcl
 commands.txt
